@@ -1,0 +1,29 @@
+ /*
+ Given five positive integers,
+ find the minimum and maximum values that can be calculated by summing exactly four of the five integers.
+ Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+ */
+
+ // In this type of question first sort the array, because when we sort the array then consequtively adding the number except the larger once that
+ // is present in the last index will give us the min sum and if we leave first index element then it will return the maximum sum
+ 
+ 
+ 
+ 
+ public static void miniMaxSum(List<Integer> arr) {
+    // Write your code here
+    long minSum = 0, maxSum=0;
+    Collections.sort(arr);
+    
+    for(int i=1;i<=4;i++){
+        //List<Integer> arr1 = new ArrayList<>();
+         minSum += arr.get(i-1);
+         maxSum += arr.get(5-i);      
+                
+    }
+    System.out.println(minSum + " "+ maxSum);
+  
+
+    }
+//https://www.hackerrank.com/challenges/one-month-preparation-kit-mini-max-sum/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-month-preparation-kit&playlist_slugs%5B%5D=one-month-week-one
+
