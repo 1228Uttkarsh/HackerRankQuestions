@@ -1,0 +1,28 @@
+public static void plusMinus(List<Integer> arr) {
+    int n = arr.size();
+    float pos = 0, neg = 0, zer = 0;
+
+    for (int value : arr) {
+        if (value < 0) {
+            neg++;
+        } else if (value > 0) {
+            pos++;
+        } else {
+            zer++;
+        }
+    }
+
+    float r1 = pos / n;
+    float r2 = neg / n;
+    float r3 = zer / n;
+
+    System.out.println(r1);
+    System.out.println(r2);
+    System.out.println(r3);
+}
+
+
+
+/*
+https://www.hackerrank.com/challenges/one-month-preparation-kit-plus-minus/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-month-preparation-kit&playlist_slugs%5B%5D=one-month-week-one
+*/
